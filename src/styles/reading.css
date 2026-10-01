@@ -1,0 +1,47 @@
+.reading-section { padding-block: 96px 110px; background: #f0f3eb; border-radius: 48% 52% 0 0 / 48px 48px 0 0; }
+.reading-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 40px; }
+.reading-heading h2 { font-size: clamp(38px, 4.2vw, 60px); font-weight: 500; line-height: 1.4; margin-top: 18px; }
+.reading-heading h2 em { color: #597d5f; }
+.reading-heading > p { max-width: 330px; font-size: 16px; line-height: 2; color: #506d5c; }
+.reading-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; }
+.reading-card { border: 1px solid #214e431a; background: #faf9f4; border-radius: 26px; overflow: hidden; display: flex; flex-direction: column; }
+.reading-featured { grid-row: span 2; }
+.reading-image { height: 240px; overflow: hidden; }
+.reading-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+.reading-card-body { padding: 28px 30px; display: flex; flex-direction: column; flex: 1; }
+.reading-meta { color: #587363; font-size: 13px; display: flex; justify-content: space-between; gap: 16px; }
+.reading-card h3 { font-size: clamp(23px, 2.3vw, 30px); font-weight: 500; line-height: 1.6; margin: 16px 0 12px; color: #214e43; }
+.reading-card p { font-size: 16px; line-height: 1.9; color: #506d5c; margin-bottom: 22px; }
+.reading-link { align-self: start; display: inline-flex; align-items: center; gap: 24px; min-height: 44px; margin-top: auto; padding: 8px 0; background: none; border: none; color: #214e43; font-size: 15px; font-weight: 500; transition: color .2s; }
+.reading-link:hover { color: #597d5f; }
+.article-dialog { width: min(720px, calc(100% - 36px)); max-height: calc(100dvh - 48px); border: 1px solid #c9d8c9; border-radius: 26px; padding: 32px; color: #214e43; background: #faf9f4; overflow-y: auto; overscroll-behavior: contain; }
+.article-dialog::backdrop { background: #102a25b3; backdrop-filter: blur(6px); }
+.article-dialog-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 20px; }
+.article-dialog .icon-button:hover { background: #e7efe5; }
+.article-dialog h2 { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.5; margin-bottom: 16px; }
+.article-intro { font-size: 18px; line-height: 2; color: #506d5c; padding-bottom: 24px; border-bottom: 1px solid #c9d8c9; }
+.article-paragraph { margin-top: 26px; }
+.article-paragraph h3 { font-size: 20px; margin-bottom: 10px; line-height: 1.7; }
+.article-paragraph p { font-size: 16px; line-height: 2; color: #506d5c; }
+.article-close { margin-top: 30px; padding-inline: 24px; }
+@media (max-width: 760px) {
+ .reading-section { padding-block: 72px 80px; }
+ .reading-heading { display: block; }
+ .reading-heading > p { margin-top: 20px; }
+ .reading-grid { grid-template-columns: 1fr; gap: 18px; }
+ .reading-featured { grid-row: auto; }
+ .reading-image { height: 210px; }
+ .reading-card-body { padding: 24px; }
+ .article-dialog { padding: 22px; border-radius: 22px; }
+ .article-close { width: 100%; white-space: normal; }
+}
+.article-dialog { margin: auto; }
+
+/* Let the FAQ curve sit over the reading background without a white seam. */
+.reading-section + .faq-section { position: relative; margin-top: -46px; }
+@media (max-width: 760px) { .reading-section + .faq-section { margin-top: -35px; } }
+
+.reading-card:not(.reading-featured) .reading-card-body { position: relative; }
+.reading-illustration { position: absolute; top: 24px; inset-inline-end: 24px; width: 82px; height: 70px; pointer-events: none; }
+.reading-card:not(.reading-featured) .reading-meta, .reading-card:not(.reading-featured) h3 { padding-inline-end: 92px; }
+@media (max-width: 400px) { .reading-illustration { width: 65px; height: 58px; } .reading-card:not(.reading-featured) .reading-meta, .reading-card:not(.reading-featured) h3 { padding-inline-end: 72px; } }

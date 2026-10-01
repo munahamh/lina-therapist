@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-forest: #214e43;
+  --color-sage: #a8bfa8;
+  --color-cream: #faf9f4;
+  --color-mist: #e7efe5;
+  --color-ink: #183d35;
+  --font-sans: 'Alexandria', sans-serif;
+}
+
+:root { font-family: 'Alexandria', sans-serif; color: #214e43; background: #faf9f4; font-synthesis: none; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+
+body { margin: 0; min-width: 320px; }
+
+button, input, textarea { font: inherit; }
+
+button { cursor: pointer; }
+
+a { text-decoration: none; }
+
+::selection { background: #a8bfa8; color: #183d35; }
+
+:focus-visible { outline: 3px solid #91b779; outline-offset: 4px; }
+
+.site-shell { overflow: clip; }
+
+h1,h2,h3,p { margin: 0; }
+
+h1,h2,h3 { font-weight: 500; }
+
+em { font-style: normal; color: #86a98d; }
+
+.note-symbol { display: grid; place-items: center; width: 29px; height: 29px; border: 1px solid #a8bfa8; border-radius: 50%; }
+
+@media (max-width: 760px) {
+html { scroll-padding-top: 70px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+html { scroll-behavior: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+:root { --lina-forest: #214e43; --lina-sage: #a8bfa8; --lina-paper: #faf9f4; }
+
+body { line-height: 1.8; }
+
+main:focus { outline: none; }
+
+.concept-label { display: block; width: fit-content; font-size: 12px; color: #587363; margin-top: 12px; }
+
+input[dir="ltr"] { text-align: left; }
+
